@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>js13kGames A-Frame entries</title>
-	<meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
-	<meta name="author" content="end3r">
+	<title>WorkForce App</title>
+	<meta name="description" content="WorkForce.Progressive Web Apps.">
+	<meta name="author" content="Edward">
 	<meta name="theme-color" content="#B12A34">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:image" content="icons/icon-512.png">
-	<link rel="shortcut icon" href="favicon.ico">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-	<link rel="manifest" href="js13kpwa.webmanifest">
-	<script src="data/games.js" defer></script>
+	<link rel="stylesheet" href="assets/css/main2.css" />
+	
+	<link rel="manifest" href="workforce.webmanifest">
 	<script src="app.js" defer></script>
 </head>
 <body>
@@ -23,9 +22,9 @@
 					<h1 id="logo"><a href="index.html">Landed</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><div id="homeLink">Home</div></li>
 							<li>
-								<a href="#">Layouts</a>
+								<div id="entryLink">Entry</div>
 								<ul>
 									<li><a href="left-sidebar.html">Left Sidebar</a></li>
 									<li><a href="right-sidebar.html">Right Sidebar</a></li>
@@ -38,11 +37,14 @@
 						</ul>
 					</nav>
 				</header>
-<main>
-	<h1>js13kGames A-Frame entries</h1>
-	<p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a> to check its source code.</p>
-	<button id="notifications">Request dummy notifications</button>
-	<section id="content"></section>
+<main class="text-black">
+	<section id="displayList" >
+	<h3> This is List displayed Area <h3>
+	</section>>
+
+		<section id="displayEntry">
+		<h3> This is Entry displayed Area <h3>
+		</section>
 </main>
 <footer>
 	<p>&copy; js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
@@ -51,12 +53,9 @@
 
 <!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		
+			<script src="assets/js/display.js"></script>
+			<script src="assets/js/event.js"></script>
+		
 </body>
 </html>
