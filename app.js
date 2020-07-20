@@ -6,6 +6,9 @@ function init() {
   // }
 
   console.log('App initiated');
+
+  // init data
+
   displayList();
 }
 
