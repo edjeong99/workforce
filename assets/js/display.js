@@ -3,8 +3,9 @@
 function displayList() {
   console.log('DisplayList function start');
 
-  // need to check content and update if needed
+  displayMenuNavbar('List');
 
+  // need to check content and update if needed
   updateDisplayListContent();
 
   $('#displayListSection').show();
@@ -13,8 +14,15 @@ function displayList() {
 
 function displayEntry() {
   console.log('displayEntry function start');
+  displayMenuNavbar('Entry');
   $('#displayEntrySection').show();
   $('#displayListSection').hide();
+}
+
+// display current menu item in topnavbar
+function displayMenuNavbar(name) {
+  console.log('displayMenuNavbar function start   NAME = ', name);
+  document.getElementById('currentMenuDisplay').innerHTML = name;
 }
 
 // updateDisplayListContent update DOM where lists are being displayed
