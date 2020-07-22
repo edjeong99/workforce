@@ -207,19 +207,28 @@ input, select, textarea {
 
 
 
-/* Add a black background color to the top navigation */
+/*start of CSS for index.html */
+.page-wrapper {
+	display : flex;
+}
 
 .topnav {
 	display : flex;
   background-color: blue;
-  overflow: hidden;
+  
+  height : 3.4rem;
+  width:100%;
+  z-index : 100;
+  position : fixed;
+  top : 0;
+  
 }
 
 /* Style the links inside the navigation bar */
 .topnav div {
   
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -229,13 +238,13 @@ input, select, textarea {
 /* Change the color of links on hover */
 .topnav div:hover {
   background-color: #ddd;
-  color: black;
+  color: blue;
 }
 
 /* Add an active class to highlight the current page */
 .topnav div:active {
   background-color: #4CAF50;
-  color: white;
+  color: red;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -243,18 +252,37 @@ input, select, textarea {
   display: none;
 }
 
+#menuList{
+	display : flex;
+	padding : 0;
+	}
+#currentMenuDisplay{
+	display : none;
+}
+
+main{
+	margin-top: 4rem;
+}
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
-	#myTopnav{
-	
+	.topnav {
+		display : flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+	#menuList{
+	display : flex;
 		flex-direction: column;
 		align-items: flex-start;
+		width : 30%;
+		background-color: yellow;
 	}
 
   .topnav div {display: none;}
  
   .topnav div.icon {
-   
+	padding : 0.7rem 1rem;
     display: block;
   }
 }
@@ -277,4 +305,9 @@ input, select, textarea {
     display: block;
     text-align: left;
   }
+}
+
+
+.black-text{
+	color:black;
 }
