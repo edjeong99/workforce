@@ -267,11 +267,12 @@ main{
 @media screen and (max-width: 600px) {
 	.topnav {
 		display : flex;
-			flex-direction: column;
+		flex-wrap: wrap;
 			align-items: flex-start;
 		}
 
 	#menuList{
+		order : 10;
 	display : flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -292,6 +293,7 @@ main{
 }
 
 .icon{
+	width:50%;
 	display : flex;
 }
 
@@ -309,7 +311,19 @@ main{
     
   }
 
+  #rightIcon{
+	  width : 50%;
+	  
+	  order : 5;
+	  display : flex;
+	  justify-content: flex-end;
+	  height:100%;
+  }
 
+  #rightIcon *{
+	padding : 10px;
+
+}
 }
 
 
