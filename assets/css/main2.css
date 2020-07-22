@@ -282,29 +282,34 @@ main{
   .topnav div {display: none;}
  
   .topnav div.icon {
-	padding : 0.7rem 1rem;
-    display: block;
+	
+	height:100%;
+	display : flex;
+	align-items : center;
   }
+  .currentMenuDisplay{
+	display : block;
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 
-@media screen and (max-width: 600px) {
- /* .topnav.responsive {
-	  position: relative;
-	}
 
-  .topnav.responsive div.icon {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  */
   .topnav.responsive div {
     
     display: block;
     text-align: left;
   }
+  .icon>div {
+    
+    display: block;
+    
+  }
+  .responsive .icon>div {
+    
+    display: none;
+    
+  }
+
 }
 
 
