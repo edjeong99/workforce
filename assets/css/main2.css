@@ -324,6 +324,14 @@ main{
 	padding : 10px;
 
 }
+
+#entryTab{
+	display : flex;
+	justify-content: center;
+}
+#entryTab *{
+	padding : 10px;
+
 }
 
 

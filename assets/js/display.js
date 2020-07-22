@@ -15,6 +15,7 @@ function displayList() {
 function displayEntry() {
   console.log('displayEntry function start');
   displayMenuNavbar('Entry');
+  fillEntryContent();
   $('#displayEntrySection').show();
   $('#displayListSection').hide();
 }
@@ -53,4 +54,14 @@ function updateDisplayListContent() {
     content += entry;
   }
   document.getElementById('listDisplayingDiv').innerHTML = content;
+}
+
+function fillEntryContent() {
+  var content = '';
+  content =
+    '<div id="entryTab"> <div>By Voucher</div><div>By V2</div><div>Entery</div></div>';
+
+  content +=
+    '<div id="entryInput"><input></input><div id="searchButton">SERCH</div></div>';
+  document.getElementById('EntryDisplayingDiv').innerHTML = content;
 }
