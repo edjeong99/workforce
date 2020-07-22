@@ -236,13 +236,13 @@ input, select, textarea {
 }
 
 /* Change the color of links on hover */
-.topnav div:hover {
+.menuList div:hover {
   background-color: #ddd;
   color: blue;
 }
 
 /* Add an active class to highlight the current page */
-.topnav div:active {
+.menuList div:active {
   background-color: #4CAF50;
   color: red;
 }
