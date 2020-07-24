@@ -6,10 +6,11 @@ function displayList() {
   displayMenuNavbar('List');
 
   // need to check content and update if needed
-  updateDisplayListContent();
+  fillListContent();
 
   $('#displayListSection').show();
   $('#displayEntrySection').hide();
+  $('#displayElementSection').hide();
 }
 
 function displayEntry() {
@@ -18,8 +19,17 @@ function displayEntry() {
   fillEntryContent();
   $('#displayEntrySection').show();
   $('#displayListSection').hide();
+  $('#displayElementSection').hide();
 }
 
+function displayElement() {
+  displayMenuNavbar('Element');
+  fillElementContent();
+
+  $('#displayElementSection').show();
+  $('#displayEntrySection').hide();
+  $('#displayListSection').hide();
+}
 // display current menu item in topnavbar
 function displayMenuNavbar(name) {
   console.log('displayMenuNavbar function start   NAME = ', name);
@@ -27,7 +37,7 @@ function displayMenuNavbar(name) {
 }
 
 // updateDisplayListContent update DOM where lists are being displayed
-function updateDisplayListContent() {
+function fillListContent() {
   // get the latest lists
   var list = Data.getData();
   console.log(list);
@@ -63,5 +73,13 @@ function fillEntryContent() {
 
   content +=
     '<div id="entryInput"><input></input><div id="searchButton">SERCH</div></div>';
-  document.getElementById('EntryDisplayingDiv').innerHTML = content;
+  document.getElementById('entryDisplayingDiv').innerHTML = content;
+}
+
+function fillElementContent() {
+  var content = '';
+  content = '<div> This is Element Div</div>';
+
+  content += '<div >2nd Line of Element</div>';
+  document.getElementById('elementDisplayingDiv').innerHTML = content;
 }

@@ -9,14 +9,18 @@ $(document).ready(function () {
     toggleMenu();
     displayEntry();
   });
+  $('#elementLink').click(function () {
+    toggleMenu();
+    displayElement();
+  });
 });
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function toggleMenu() {
-  var x = document.getElementById('myTopnav');
-  if (x.className === 'topnav') {
+  var x = document.getElementById('menuList');
+  if (x.className === 'menuList') {
     x.className += ' responsive';
   } else {
-    x.className = 'topnav';
+    x.className = 'menuList';
   }
 }
