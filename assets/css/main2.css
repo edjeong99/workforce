@@ -236,6 +236,7 @@ input, select, textarea {
 }
 
 /* Change the color of links on hover */
+
 .menuList div:hover {
   background-color: #ddd;
   color: blue;

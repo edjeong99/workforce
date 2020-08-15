@@ -9,6 +9,9 @@ function init() {
 
   // init data
 
+  // check config.js to see which menu to display
+  configMenu();
+
   displayList();
 }
 

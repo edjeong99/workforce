@@ -1,5 +1,8 @@
+// list menus below
+// to turn on a menu, put 'on' as value for the menu
+
 displayMenu = {
-  Home: 'on',
-  Entry: 'on',
-  Element: 'on',
+  home: 'on',
+  entry: 'off',
+  element: 'on',
 };
