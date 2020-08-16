@@ -215,7 +215,7 @@ input, select, textarea {
 .topnav {
 	display : flex;
   background-color: blue;
-  
+  justify-content : flex-end;
   height : 3.4rem;
   width:100%;
   z-index : 100;
@@ -251,6 +251,7 @@ input, select, textarea {
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
+  
 }
 
 #menuList{
@@ -258,13 +259,8 @@ input, select, textarea {
 	padding : 0;
 	}
 
-.menuList div {
-		display : none;
-	}
 
-#currentMenuDisplay{
-	display : none;
-}
+
 
 main{
 	margin-top: 4rem;
@@ -274,7 +270,8 @@ main{
 	.topnav {
 		display : flex;
 		flex-wrap: wrap;
-			align-items: flex-start;
+		align-items: flex-start;
+		justify-content : flex-start;
 		}
 #menuList{
 	display:none;
