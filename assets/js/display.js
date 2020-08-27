@@ -37,9 +37,11 @@ function displayMenuNavbar(name) {
 }
 
 // updateDisplayListContent update DOM where lists are being displayed
-function fillListContent() {
+async function fillListContent() {
   // get the latest lists
-  var list = Data.getData();
+  var list = [];
+  let result = await Data.getData();
+  list.push(result);
   console.log(list);
 
   // Generating content based on the template
@@ -47,7 +49,8 @@ function fillListContent() {
     '<article>\n\
 	<h3>#ID. TITLE</h3>\n\
 	<ul>\n\
-	<li>CONTENT</li>\n\
+  <li>Price : $PRICE</li>\n\
+  <li>Change : CHANGE</li>\n\
 		</ul>\n\
 </article>';
 
@@ -58,9 +61,10 @@ function fillListContent() {
 
   for (var i = 0; i < list.length; i++) {
     var entry = template
-      .replace(/ID/g, list[i].id)
-      .replace(/TITLE/g, list[i].title)
-      .replace(/CONTENT/g, list[i].content);
+      .replace(/ID/g, i)
+      .replace(/TITLE/g, list[i].companyName)
+      .replace(/PRICE/g, list[i].latestPrice)
+      .replace(/CHANGE/g, list[i].changePercent);
     content += entry;
   }
   document.getElementById('listDisplayingDiv').innerHTML = content;
