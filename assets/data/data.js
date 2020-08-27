@@ -1,7 +1,16 @@
 function Data() {}
 
 Data.getData = async function () {
-  return await getDataFromAPI();
+  console.log('DATA getData begin');
+  // let responds =
+  // let result = [];
+  // console.log('DATA getData before loop');
+  // for (let i = 0; i < responds.length; i++) {
+  //   result.push(responds[i].json());
+  // }
+  // console.log('DATA result = ');
+  // console.log(result);
+  return await getCurrentPricesFromAPI(['GOOGL', 'AMZN', 'AAPL']);
   // Data.dataList;
 };
 

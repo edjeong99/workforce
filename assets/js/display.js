@@ -32,16 +32,17 @@ function displayElement() {
 }
 // display current menu item in topnavbar
 function displayMenuNavbar(name) {
-  console.log('displayMenuNavbar function start   NAME = ', name);
+  //console.log('displayMenuNavbar function start   NAME = ', name);
   document.getElementById('currentMenuDisplay').innerHTML = name;
 }
 
 // updateDisplayListContent update DOM where lists are being displayed
 async function fillListContent() {
   // get the latest lists
-  var list = [];
-  let result = await Data.getData();
-  list.push(result);
+
+  let list = await Data.getData();
+  // list.push(result);
+  console.log('fillListContent List = ');
   console.log(list);
 
   // Generating content based on the template
@@ -61,7 +62,7 @@ async function fillListContent() {
 
   for (var i = 0; i < list.length; i++) {
     var entry = template
-      .replace(/ID/g, i)
+      .replace(/ID/g, i + 1)
       .replace(/TITLE/g, list[i].companyName)
       .replace(/PRICE/g, list[i].latestPrice)
       .replace(/CHANGE/g, list[i].changePercent);
