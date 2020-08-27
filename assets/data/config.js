@@ -3,6 +3,6 @@
 
 displayMenu = {
   home: 'on',
-  entry: 'off',
-  element: 'on',
+  entry: 'on',
+  element: 'off',
 };
