@@ -343,3 +343,18 @@ main{
 .black-text{
 	color:black;
 }
+
+.companyTitle{
+	margin-bottom : 0;
+}
+
+.StockCard{
+	margin : 0.5em 0.2em;
+}
+
+.blueFont{
+	color : blue;
+}
+.redFont{
+	color:red;
+}

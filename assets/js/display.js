@@ -47,11 +47,11 @@ async function fillListContent() {
 
   // Generating content based on the template
   var template =
-    '<article>\n\
-	<h3>#ID. TITLE</h3>\n\
+    '<article class="StockCard">\n\
+	<h3 class="companyTitle">#ID. TITLE</h3>\n\
 	<ul>\n\
   <li>Price : $PRICE</li>\n\
-  <li>Change : CHANGE</li>\n\
+  <li>Change : <span class="fontColor">CHANGE% ARROW</span></li>\n\
 		</ul>\n\
 </article>';
 
@@ -64,8 +64,18 @@ async function fillListContent() {
     var entry = template
       .replace(/ID/g, i + 1)
       .replace(/TITLE/g, list[i].companyName)
-      .replace(/PRICE/g, list[i].latestPrice)
-      .replace(/CHANGE/g, list[i].changePercent);
+      .replace(/PRICE/g, list[i].latestPrice.toLocaleString())
+      .replace(/CHANGE/g, Math.abs(list[i].changePercent * 100).toFixed(2));
+
+    if (list[i].changePercent >= 0)
+      entry = entry
+        .replace(/fontColor/g, 'blueFont')
+        .replace(/ARROW/g, "<i class='fas fa-arrow-up'></i>");
+    else
+      entry = entry
+        .replace(/fontColor/g, 'redFont')
+        .replace(/ARROW/g, "<i class='fas fa-arrow-down'></i>");
+
     content += entry;
   }
   document.getElementById('listDisplayingDiv').innerHTML = content;

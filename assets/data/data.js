@@ -10,7 +10,7 @@ Data.getData = async function () {
   // }
   // console.log('DATA result = ');
   // console.log(result);
-  return await getCurrentPricesFromAPI(['GOOGL', 'AMZN', 'AAPL']);
+  return await getCurrentPricesFromAPI(['GOOGL', 'AMZN', 'WMT', 'AAPL']);
   // Data.dataList;
 };
 
