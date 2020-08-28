@@ -1,5 +1,5 @@
 // Files to cache
-var cacheName = 'js13kPWA-v1';
+var cacheName = 'workforce';
 var appShellFiles = ['index.html', 'app.js', 'sw.js'];
 
 // var gamesImages = [];
