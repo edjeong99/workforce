@@ -42,20 +42,21 @@ async function fillListContent() {
 
   let list = await Data.getData();
   // list.push(result);
-  console.log('fillListContent List = ');
-  console.log(list);
+  // console.log('fillListContent List = ');
+  // console.log(list);
 
   // Generating content based on the template
   var template =
     '<article class="StockCard">\n\
-	<h3 class="companyTitle">#ID. TITLE</h3>\n\
+	<h4 class="companyTitle">#ID. TITLE</h3>\n\
 	<ul>\n\
-  <li>Price : $PRICE</li>\n\
-  <li>Change : <span class="fontColor">CHANGE% ARROW</span></li>\n\
-		</ul>\n\
+   <li>Price : $PRICE  <span class="smallerFont fontColor">(CHANGE% ARROW)</span></li>\n\
+	</ul>\n\
 </article>';
 
-  var content = '';
+  var content = '<div>Time</div>\n\
+  <div>TIME</div>';
+  content = content.replace(/TIME/g, new Date(list[0].iexLastUpdated));
 
   // clean the displaying content
   document.getElementById('listDisplayingDiv').innerHTML = content;

@@ -2,10 +2,25 @@ function init() {
   console.log('App initiated');
 
   // Registering Service Worker
+  // if ('serviceWorker' in navigator) {
+  //   console.log('app.js sw register');
+  //   navigator.serviceWorker.register('/sw.js');
+  // } else console.log('app.js sw register FAILED');
+
   if ('serviceWorker' in navigator) {
-    console.log('app.js sw register');
-    navigator.serviceWorker.register('/sw.js');
-  } else console.log('app.js sw register FAILED');
+    window.addEventListener('load', () => {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          console.log(
+            `Service Worker registered! Scope: ${registration.scope}`
+          );
+        })
+        .catch((err) => {
+          console.log(`Service Worker registration failed: ${err}`);
+        });
+    });
+  }
 
   // init data
 
