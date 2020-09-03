@@ -41,9 +41,9 @@ async function fillListContent() {
   // get the latest lists
 
   let list = await Data.getData();
-  // list.push(result);
-  // console.log('fillListContent List = ');
-  // console.log(list);
+
+  console.log('fillListContent List = ');
+  console.log(list);
 
   // Generating content based on the template
   var template =

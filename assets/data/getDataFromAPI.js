@@ -12,11 +12,16 @@
 async function getCurrentPricesFromAPI(companies) {
   let result = [];
   for (let i = 0; i < companies.length; i++) {
-    let response = await fetch(
-      `https://cloud.iexapis.com/stable/stock/${companies[i]}/quote?token=pk_9d1575de6ba8426b9a036edc8cd74274`
-    );
-    let data = await response.json();
-    result.push(data);
+    try {
+      let response = await fetch(
+        `https://cloud.iexapis.com/stable/stock/${companies[i]}/quote?token=pk_9d1575de6ba8426b9a036edc8cd74274`
+      );
+      let data = await response.json();
+      result.push(data);
+    } catch (err) {
+      console.log('Catch in getDataFrom API');
+      console.log(err); // TypeError: failed to fetch
+    }
   }
   return result;
 
