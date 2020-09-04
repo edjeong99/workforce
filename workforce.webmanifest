@@ -3,11 +3,15 @@
     "short_name": "workforce",
     "description": "Progressive Web App that lists workforce lists",
     "icons": [
-        // {
-        //     "src": "icons/icon-32.png",
-        //     "sizes": "32x32",
-        //     "type": "image/png"
-        // },
+        {
+            "src": "images/icon512.png",
+                "sizes": "512x512",
+                "type": "image/png"
+         } ,
+         {   "src": "images/icon192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
         // {
         //     "src": "icons/icon-64.png",
         //     "sizes": "64x64",

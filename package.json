@@ -4,7 +4,8 @@
   "description": "This is a workforce app project.\r The goal is building an production quality PWA app with basic Javascript and JQuery",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "workbox generateSW workbox-config.js"
   },
   "repository": {
     "type": "git",

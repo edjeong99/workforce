@@ -9,7 +9,6 @@ module.exports = {
       // Match any request that ends with .png, .jpg, .jpeg or .svg.
       urlPattern: /https:\/\/cloud\.iexapis\.com\/stable/,
       // https://cloud.iexapis.com/stable/stock
-      ///\.(?:png|jpg|jpeg|svg)$/
       // Apply a cache-first strategy.
       handler: 'NetworkFirst',
 
@@ -18,6 +17,9 @@ module.exports = {
         cacheName: 'stockPrice',
 
         plugins: [
+          // new ExpirationPlugin({
+          //   maxAgeSeconds: 60 * 60,
+          // }),
           // maxAgeSeconds,
           // 60 * 60, // 1 hour
         ],
