@@ -22,6 +22,12 @@ function init() {
     });
   }
 
+  //add version info at the footer
+  console.log('init version ');
+  document.getElementById('footer').innerHTML = `  ver : ${VERSION}`;
+  //
+  //    .appendChild(document.createTextNode('   ver : ' + VERSION));
+
   // init data
 
   // check config.js to see which menu to display

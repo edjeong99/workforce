@@ -6,3 +6,5 @@ displayMenu = {
   entry: 'on',
   element: 'off',
 };
+
+VERSION = '1.0.0';
