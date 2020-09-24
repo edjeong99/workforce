@@ -54,9 +54,11 @@ async function fillListContent() {
 	</ul>\n\
 </article>';
 
-  var content = '<div>Time</div>\n\
-  <div>TIME</div>';
-  content = content.replace(/TIME/g, new Date(list[0].iexLastUpdated));
+  var content = '<div class="time">Updated : TIME</div>';
+  content = content.replace(
+    /TIME/g,
+    new Date(list[0].iexLastUpdated).toLocaleString()
+  );
 
   // clean the displaying content
   document.getElementById('listDisplayingDiv').innerHTML = content;
