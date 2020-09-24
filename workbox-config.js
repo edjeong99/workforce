@@ -2,8 +2,8 @@ module.exports = {
   globDirectory: './',
   globPatterns: ['**/*.{css,html,js,webmanifest,jpg,PNG,ico}'],
   swDest: 'sw.js',
-  skipwaiting: true,
-  clientclaim: true,
+  // skipwaiting: true,
+  // clientclaim: true,
 
   // Define runtime caching rules.
   runtimeCaching: [
@@ -17,7 +17,7 @@ module.exports = {
       options: {
         // Use a custom cache name.
         cacheName: 'stockPrice',
-        maxAgeSeconds: 2 * 60,
+        //  maxAgeSeconds: 2 * 60,
         plugins: [
           // new ExpirationPlugin({
           //   maxAgeSeconds: 60 * 60,
